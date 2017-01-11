@@ -1,4 +1,5 @@
-<body onload='Bildirim("test yayını", "http://files.premium-turk.net/assets/img/youtube.png", "sunucu yast", "link")'>
+<!-- Premium-turk.net -->
+<body onload='Bildirim("Başlık", "Resim", "Açıklama", "Link")'>
 <meta charset="utf8">
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -8,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function Bildirim(konu, img, sunucu, link) {
   if (!Notification) {
-    alert('Desktop notifications not available in your browser. Try Chromium.'); 
+    alert('Tarayıcın bazı eklentileri desteklemiyor. Lütfen Google Chrome kullanın!'); 
     return;
   }
 
