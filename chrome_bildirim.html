@@ -1,0 +1,31 @@
+<body onload='Bildirim("test yayını", "http://files.premium-turk.net/assets/img/youtube.png", "sunucu yast", "link")'>
+<meta charset="utf8">
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+});
+
+function Bildirim(konu, img, sunucu, link) {
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Chromium.'); 
+    return;
+  }
+
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+  else {
+    var notification = new Notification(konu, {
+      icon: img,
+      body: sunucu,
+    });
+
+    notification.onclick = function () {
+      window.open(link);      
+    };
+
+  }
+
+}
+</script>
+</body>
